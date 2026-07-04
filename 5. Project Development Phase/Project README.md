@@ -70,7 +70,7 @@ Flood_Prediction/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Flood_Prediction.git
+git clone https://github.com/mamidalaswathi2006-alt/Rising_Waters_Project
 ```
 
 Navigate to the project directory:
@@ -109,7 +109,7 @@ The flood prediction model is developed using the **Random Forest Classifier** f
 
 **PythonAnywhere Deployment**
 
-https://Swathi7892.pythonanywhere.com
+Swathi7892.pythonanywhere.com
 
 ---
 
