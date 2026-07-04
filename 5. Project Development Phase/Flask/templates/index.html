@@ -1,1 +1,177 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+
+<title>Flood Prediction System</title>
+
+
+<style>
+
+body{
+
+margin:0;
+font-family:Arial;
+background:linear-gradient(120deg,#eaf7ff,#ffffff);
+
+}
+
+
+.navbar{
+
+background:white;
+padding:20px;
+text-align:center;
+box-shadow:0 2px 10px #ccc;
+
+}
+
+
+.navbar a{
+
+text-decoration:none;
+margin:20px;
+color:#0077aa;
+font-weight:bold;
+
+}
+
+
+.container{
+
+width:450px;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px #ccc;
+
+}
+
+
+h1{
+
+text-align:center;
+color:#0077aa;
+
+}
+
+
+input{
+
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:8px;
+border:1px solid #aaa;
+
+}
+
+
+button{
+
+width:100%;
+padding:12px;
+background:#0099cc;
+color:white;
+border:none;
+border-radius:10px;
+font-size:18px;
+
+}
+
+
+button:hover{
+
+background:#006f99;
+
+}
+
+
+.result{
+
+margin-top:20px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="navbar">
+
+<a href="/">🏠 Home</a>
+
+<a href="/analytics">📊 Analytics</a>
+
+<a href="/contact">📞 Contact</a>
+
+</div>
+
+
+
+<div class="container">
+
+
+<h1>🌧 Flood Prediction</h1>
+
+
+<form action="/predict" method="post">
+
+
+<input name="Temp" placeholder="Temperature" required>
+
+<input name="Humidity" placeholder="Humidity" required>
+
+<input name="Cloud Cover" placeholder="Cloud Cover" required>
+
+<input name="ANNUAL" placeholder="Annual Rainfall" required>
+
+<input name="Jan-Feb" placeholder="Jan-Feb Rainfall" required>
+
+<input name="Mar-May" placeholder="Mar-May Rainfall" required>
+
+<input name="Jun-Sep" placeholder="Jun-Sep Rainfall" required>
+
+<input name="Oct-Dec" placeholder="Oct-Dec Rainfall" required>
+
+<input name="avgjune" placeholder="Average June Rainfall" required>
+
+<input name="sub" placeholder="Sub" required>
+
+
+<button>
+Predict Flood Risk
+</button>
+
+
+</form>
+
+
+{% if prediction %}
+
+<div class="result">
+
+{{prediction}}
+
+</div>
+
+{% endif %}
+
+
+
+</div>
+
+
+</body>
+
+</html>
